@@ -1,9 +1,11 @@
 /*secondCircleFix.js
 Example of how complicated callback chains can be simplified with Promises
 Jake Levy
+Oct 2020
+
 Credit for code example: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises
 
-The second Circle of Callback hell, made easier through the Promises.
+ Promises offer us a road out of callback hell.x
 
 Promises allow us to resolve any failure with the same callback function
 */

@@ -1,8 +1,9 @@
 /*Example of how callbacks can get canfusing.
 Jake Levy
+Oct 2020
 Credit for code example: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises
 
-The second Circle of Callback hell.
+The Third Circle of Callback hell.
 Usually you will want both a success and failure callback for functions:
 success for when things work, failure for when things don't
 

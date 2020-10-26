@@ -1,6 +1,8 @@
 /*Example of how callbacks can get canfusing.
 Credit for code example: https://medium.com/techfront/javascript-callback-hell-simply-explained-93c3cf4be884
 
+Jake Levy
+Oct 2020
 */
 
 

@@ -1,6 +1,8 @@
 /*
 fixed.js
 Promises offer us a way out of callback hell
+Jake Levy
+Oct 2020
 */
 
 
