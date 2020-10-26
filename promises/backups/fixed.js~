@@ -1,0 +1,55 @@
+/*
+fixed.js
+Promises offer us a way out of callback hell
+*/
+
+
+//Callbacks can be confusing to both read AND write
+//Here we see chained series of callbacks, an issue that was common in early JS
+
+//Order Pizza Accepts a pizza & a callback function
+//that it passes its pizza to
+var orderPizza= function(pizza){
+    return new Promise( (resolve, reject)=>{
+	console.log(`Ordering ${pizza}`);
+	resolve(`${pizza}`);
+    });
+}
+
+//orderToppings accepts a pizza and a callback that it will pass pizza to
+var orderToppings = function(pizza){
+    
+    return new Promise( (resolve, reject) =>{
+	
+	console.log(`Let\'s order mushrooms`);	
+	resolve(`Mushroom ${pizza}`);
+    });
+}
+//You should get the picture by now, sideOrders accepts a pizza and callback
+//that it will pass pizza to
+var sideOrders = function(pizza){
+    return new Promise( (resolve, reject)=>{
+	console.log("lets get wings too!");
+	resolve(`${pizza} Pizza and Hot Wings`);
+    });
+}
+//to keep the example short, pay does not accept a callback and ends the chain
+var pay = function (pizza){
+    console.log(`${pizza} is too expensive, let\'s just eat crackers`);
+
+}
+
+orderPizza("Cheese")
+    .then( pizza =>
+	   orderToppings(pizza)
+	 )
+    .then( pizza =>
+	   sideOrders(pizza)
+	 )
+    .then( pizza =>
+	   pay(pizza)
+	 );
+
+    
+
+	

@@ -1,0 +1,39 @@
+/*Example of how callbacks can get canfusing.
+Credit for code example: https://medium.com/techfront/javascript-callback-hell-simply-explained-93c3cf4be884
+
+*/
+
+
+//Callbacks can be confusing
+
+
+var orderPizza= function(pizza, next){
+    console.log(`Ordering ${pizza}`);
+    next(`${pizza}`);
+}
+
+var orderToppings = function(pizza, next){
+
+    console.log(`Let\'s order mushrooms`);
+
+    next(`Mushroom ${pizza}`);
+}
+
+var sideOrders = function(pizza, next){
+
+    console.log("lets get wings too!");
+    next(`${pizza} Pizza and Hot Wings`);
+}
+
+var pay = function (pizza){
+    console.log(`${pizza} is too expensive, let\'s just eat crackers`);
+
+}
+
+orderPizza("Cheese", (pizza)=>{
+    orderToppings(pizza, (pizza) =>{
+	sideOrders(pizza, (pizza)=> {
+	    pay(pizza);
+	});
+    });
+});
