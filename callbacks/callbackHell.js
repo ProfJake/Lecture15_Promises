@@ -11,7 +11,7 @@ Oct 2020
 
 //Order Pizza Accepts a pizza & a callback function
 //that it passes its pizza to
-var orderPizza= function(pizza, next){}
+var orderPizza= function(pizza, next){
     console.log(`Ordering ${pizza}`);
     next(`${pizza}`);
 }
